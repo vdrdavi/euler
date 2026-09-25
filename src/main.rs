@@ -3,9 +3,10 @@ use core::num;
 fn main() {
     //zero();
     //one();
-    two();
+    //two();
 }
 
+#[allow(dead_code)]
 fn two() {
     let n = 4000000;    
     let mut numeros: Vec<usize> = Vec::with_capacity(n);
