@@ -7,21 +7,21 @@ fn main() {
 
 fn three() {
     let n: i64 = 600851475143;
-    let mut vet = Vec::new();
+    let mut numeros = Vec::new();
     for x in (3..n.isqrt()+1).step_by(2) {
         if n % x == 0 {
             println!("verificando...");
-            vet.push(x);
+            numeros.push(x);
             for y in (3..x.isqrt()+1).step_by(2) {
                 if x % y == 0 {
-                    vet.pop();
+                    numeros.pop();
                     println!("{x} não é primo, é divisivel por {y}");
                     break;
                 }
             }
         }
     }
-    println!("resposta: {:?}", vet);
+    println!("resposta:{}", numeros.iter().max().unwrap());
 }
 #[allow(dead_code)]
 fn two() {
