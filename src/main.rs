@@ -1,5 +1,3 @@
-use std::range;
-
 fn main() {
     //zero();
     //one();
@@ -7,9 +5,34 @@ fn main() {
     //three();
     //four();
     //five();
-    six();
+    //six();
+    seven();
 }
 
+#[allow(dead_code)]
+fn seven() {
+    let mut contador = 0;
+    let mut numero = 2;
+    while contador < 10001 {
+        if numero % 2 != 0{
+            contador+=1;
+            for x in 2..numero{
+                if numero % x == 0{
+                    contador-=1;
+                    break;
+                }
+            }
+        }
+        else if numero == 2{
+            contador+=1
+        }
+        println!("numero {} contador {}",numero,contador);
+        numero+=1
+    }
+    println!("{} contou {}",numero-1, contador)
+    
+}
+#[allow(dead_code)]
 fn six() {
     let mut soma_dos_quadrados: i32 = 0;
     let mut quadrado_da_soma: i32 = 0;
@@ -21,7 +44,6 @@ fn six() {
 
     println!("{}",quadrado_da_soma.pow(2) - soma_dos_quadrados);
 }
-
 #[allow(dead_code)]
 fn five(){
     let mut resolvido:bool = false;
