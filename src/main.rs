@@ -1,11 +1,27 @@
+use std::range;
+
 fn main() {
     //zero();
     //one();
     //two();
     //three();
     //four();
-    five();
+    //five();
+    six();
 }
+
+fn six() {
+    let mut soma_dos_quadrados: i32 = 0;
+    let mut quadrado_da_soma: i32 = 0;
+
+    for x in 1i32..=100 {
+        soma_dos_quadrados += x.pow(2);
+        quadrado_da_soma += x;
+    }
+
+    println!("{}",quadrado_da_soma.pow(2) - soma_dos_quadrados);
+}
+
 #[allow(dead_code)]
 fn five(){
     let mut resolvido:bool = false;
@@ -22,7 +38,6 @@ fn five(){
     }
     println!("{}", numero-1)
 }
-
 #[allow(dead_code)]
 fn four(){
     let n = 999;
