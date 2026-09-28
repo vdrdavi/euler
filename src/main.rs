@@ -8,7 +8,24 @@ fn main() {
     //six();
     //seven();
     //eight();
-    nine();
+    //nine();
+    ten();
+}
+
+fn ten() {
+    let n:i64 = 2000000;
+    let mut primos: Vec<i64> = vec![2];
+    for x in (3i64..n).step_by(2) {
+        println!("{x}");
+        primos.push(x);
+        for y in (3..x.isqrt()+1).step_by(2) {
+            if x % y == 0 {
+                primos.pop();
+                break;
+            }
+        }
+    }
+    println!("soma: {}", primos.iter().sum::<i64>())
 }
 
 #[allow(dead_code)]
@@ -16,8 +33,8 @@ fn nine() {
     for a in 1i32..1000 {
         for b in 1i32..1000 {
             for c in 1i32..1000 {
-                if a.pow(2) + b.pow(2) == c.pow(2) && a<b && b<c && a+b+c == 1000{
-                    println!("{}", a*b*c);
+                if a.pow(2) + b.pow(2) == c.pow(2) && a < b && b < c && a + b + c == 1000 {
+                    println!("{}", a * b * c);
                     return;
                 }
             }
