@@ -9,9 +9,10 @@ fn main() {
     //seven();
     //eight();
     //nine();
-    ten();
+    //ten();
 }
 
+#[allow(dead_code)]
 fn ten() {
     let n:i64 = 2000000;
     let mut primos: Vec<i64> = vec![2];
@@ -25,9 +26,8 @@ fn ten() {
             }
         }
     }
-    println!("soma: {}", primos.iter().sum::<i64>())
+    println!("{}", primos.iter().sum::<i64>())
 }
-
 #[allow(dead_code)]
 fn nine() {
     for a in 1i32..1000 {
