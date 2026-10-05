@@ -1,4 +1,4 @@
-mod pe_36;
+mod pe_56;
 fn main() {
-    pe_36::thirty_six();
+    pe_56::fifty_six();
 }
