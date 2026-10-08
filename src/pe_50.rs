@@ -10,7 +10,6 @@ pub fn fifty() {
         for j in i + 1..primos.len() {
             soma = primos[i..j].iter().sum::<i64>();
             let tamanho = j - i;
-            //println!("{:?}",&primos[i..j]);
             if soma > n {
                 break;
             }
